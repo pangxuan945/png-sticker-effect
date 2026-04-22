@@ -8,9 +8,9 @@ A simple Python utility that adds a **white outline + black shadow** to PNG imag
 
 ## 效果预览 Effect Preview
 
-| 原图 (透明背景 PNG) Original Image (Transparent Background PNG)| 处理后 Processed |
-| :---: | :---: |
-| <img src="docs/demo_before.png" width="400"> | <img src="docs/demo_after.png" width="400"> |
+|原图 (透明背景 PNG) Original Image (Transparent Background PNG) |             处理后 Processed              |
+|:--------------------------------------------------------:|:--------------------------------------:|
+|         <img src="demo_before.png" width="400">          | <img src="demo_after.png" width="400"> |
 
 ## 环境要求 Environmental Requirements
 

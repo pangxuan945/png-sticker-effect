@@ -21,7 +21,7 @@ ENV/
 # 项目输出
 output/
 
-# 可选:忽略所有测试用的 PNG(如果你不想把照片提交到 Git)
-# *.png
-# *.PNG
-# !docs/*.png
+# 忽略所有测试用的 PNG
+*.png
+*.PNG
+!docs/*.png

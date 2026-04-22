@@ -67,8 +67,9 @@ def add_sticker_effect(img: Image.Image, sizes: dict) -> Image.Image:
 
     lo, _ = alpha.getextrema()
     if lo == 255:
-        print("    ⚠️  这张图 alpha 全 255(没有透明区),白边/阴影没地方显示")
-        return img
+        # 图片没有透明区 → 把整张矩形当作"主体",
+        # 加矩形白边和矩形阴影(输出画布会变大)。
+        print("    ℹ️  这张图 alpha 全 255(没有透明区),按矩形加白边和阴影")
 
     outline_px = sizes["outline_px"]
     shadow_blur = sizes["shadow_blur"]
