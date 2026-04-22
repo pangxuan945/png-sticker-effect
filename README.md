@@ -8,9 +8,9 @@ A simple Python utility that adds a **white outline + black shadow** to PNG imag
 
 ## 效果预览 Effect Preview
 
-|原图 (透明背景 PNG) Original Image (Transparent Background PNG) |             处理后 Processed              |
-|:--------------------------------------------------------:|:--------------------------------------:|
-|         <img src="demo_before.png" width="400">          | <img src="demo_after.png" width="400"> |
+| 原图 (透明背景 PNG) Original Image (Transparent Background PNG)| 处理后 Processed |
+| :---: | :---: |
+| ![Original](demo_before.png) | ![Sticker](demo_after.png) |
 
 ## 环境要求 Environmental Requirements
 
@@ -162,9 +162,9 @@ python sticker_effect.py --output-dir ~/Desktop/my_stickers
 
 ## Input requirements
 
-**The input must be PNG (RGBA mode) with a real transparent background. ** If the alpha channel of PNG is all 255 (that is, it is completely transparent, and the black edge is actually a real black pixel), the script will print a warning and skip it - there is no place to draw white borders and shadows.
+**The input must be PNG (RGBA mode) with a real transparent background.** If the alpha channel of PNG is all 255 (that is, it is completely transparent, and the black edge is actually a real black pixel), the script will print a warning and skip it - there is no place to draw white borders and shadows.
 
-**How to get the transparent background PNG? **
+**How to get the transparent background PNG?**
 
 - **iOS**: Open the Photos App → Long press the body to automatically key → **Drag** (not copying) to "Memo" → Long press the picture "Save to Photos"
 
@@ -173,7 +173,7 @@ python sticker_effect.py --output-dir ~/Desktop/my_stickers
 - **Ket website**: remove.bg, Adobe Express free key, etc.
 
 - **In Python**, you can use [rembg](https://github.com/danielgatis/rembg) to remove the background in batches.
-- 
+
 ## 项目结构 Structure
 
 ```
