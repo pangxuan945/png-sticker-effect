@@ -8,7 +8,9 @@ A simple Python utility that adds a **white outline + black shadow** to PNG imag
 
 ## 效果预览 Effect Preview
 
-
+| 原图 (透明背景 PNG) Original Image (Transparent Background PNG)| 处理后 Processed |
+| :---: | :---: |
+| <img src="docs/demo_before.png" width="400"> | <img src="docs/demo_after.png" width="400"> |
 
 ## 环境要求 Environmental Requirements
 
@@ -97,38 +99,26 @@ python sticker_effect.py input.png -o mysticker.png
 | `--dx-px` / `--dy-px` | 阴影偏移(像素) |
 
 
-## Parameter Description
+## Parameter description
 
-All dimensions are calculated as a percentage of the image's short edge by default, ensuring consistent effects across different resolution images.
+All sizes are calculated by default according to the percentage of the short side of the picture ** to ensure that the effect of the picture of different resolutions is consistent.
 
-| Parameter | Default Value | Description |
-
-| --- | --- | --- |
-
-| `--outline-ratio` | `0.030` | White edge width as a percentage of the short edge (3%) |
-
-| `--blur-ratio` | `0.025` | Shadow blur radius as a percentage of the short edge |
-
-| `--dx-ratio` | `0.008` | Horizontal shadow offset as a percentage of the short edge |
-
-| `--dy-ratio` | `0.008` | Vertical shadow offset as a percentage of the short edge |
-
+| Parameters | Default value | Description |
+|---|---|---|---|
+| `--outline-ratio` | `0.030` | The ratio of white edge width to short edge (3%) |
+| `--blur-ratio` | `0.025` | The ratio of the shadow blur radius to the short side |
+| `--dx-ratio` | `0.008` | The proportion of shadow horizontal offset to the short side |
+| `--dy-ratio` | `0.008` | The proportion of the vertical offset of the shadow to the short side |
 | `--opacity` | `110` | Shadow opacity (0-255) |
-
 | `--output-dir` | `output` | Output directory |
 
-To fix pixels (not scaling with the image), use absolute pixels to override:
+If you need fixed pixels (not scaled with the picture), use absolute pixels to cover:
 
-| Parameter | Description |
-
-| --- | --- |
-
-| `--outline-px` | White edge width (pixels) |
-
-| `--blur-px` | Shadow blur radius (pixels) |
-
-| `--dx-px` / `--dy-px` | Shadow offset (pixels) |
-
+| Parameters | Description |
+|---|---|
+| `--outline-px` | White edge width (pixel) |
+| `--blur-px` | Shadow blur radius (pixel) |
+| `--dx-px` / `--dy-px` | Shadow offset (pixel) |
 
 ### 示例
 
