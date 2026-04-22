@@ -103,14 +103,14 @@ python sticker_effect.py input.png -o mysticker.png
 
 All sizes are calculated by default according to the percentage of the short side of the picture ** to ensure that the effect of the picture of different resolutions is consistent.
 
-| Parameters | Default value | Description |
-|---|---|---|---|
-| `--outline-ratio` | `0.030` | The ratio of white edge width to short edge (3%) |
-| `--blur-ratio` | `0.025` | The ratio of the shadow blur radius to the short side |
-| `--dx-ratio` | `0.008` | The proportion of shadow horizontal offset to the short side |
-| `--dy-ratio` | `0.008` | The proportion of the vertical offset of the shadow to the short side |
+| Parameters | Default | Description |
+| --- | --- | --- |
+| `--outline-ratio` | `0.030` | White edge width as a percentage of the short side (3%) |
+| `--blur-ratio` | `0.025` | Shadow blur radius as a percentage of the short side |
+| `--dx-ratio` | `0.008` | Shadow horizontal offset as a percentage of the short side |
+| `--dy-ratio` | `0.008` | Shadow vertical offset as a percentage of the short side |
 | `--opacity` | `110` | Shadow opacity (0-255) |
-| `--output-dir` | `output` | Output directory |
+| `--output-dir` | `output` | Output Directory |
 
 If you need fixed pixels (not scaled with the picture), use absolute pixels to cover:
 
