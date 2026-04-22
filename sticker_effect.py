@@ -119,6 +119,8 @@ def process_file(src: str, dst: str, overrides: dict):
     print(f"    ✓ 输出 → {dst}   {result.size}")
 
 
+EXCLUDE_FILES = {"demo_before.png", "demo_after.png"}  # 不处理的文件(大小写不敏感)
+
 def find_pngs_in_script_folder(output_dir: str):
     """找到脚本所在目录下的所有 PNG(跳过 output 目录里的文件)。"""
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -134,6 +136,9 @@ def find_pngs_in_script_folder(output_dir: str):
         seen.add(key)
         # 跳过输出目录里的文件(防止把已生成的贴纸当输入)
         if os.path.abspath(f).startswith(output_dir_abs + os.sep):
+            continue
+        # 跳过排除清单里的文件
+        if os.path.basename(f).lower() in {n.lower() for n in EXCLUDE_FILES}:
             continue
         # 兼容旧输出命名
         if OUTPUT_SUFFIX in os.path.basename(f):
